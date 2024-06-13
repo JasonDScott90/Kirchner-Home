@@ -146,7 +146,7 @@ img {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
 }
 #service-section div h2{
     text-align: center;
@@ -157,9 +157,6 @@ img {
 }
 /*------------------CONTACT-FORM--------------------------------*/
 #contact-container{
-    /* border-width: 2px;
-    border-style: solid;
-    border: #000220; */
     width: 100%;
     height: 50vh;
     background-color: white;
@@ -173,13 +170,25 @@ img {
     padding-bottom: 20px;
 }
 #contact-container form{
+    width: 30%;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 3px;
+}
+#contact-container form input,
+#contact-container form{
+    height: 150px;
+}
+#contact-container form textarea{
+   
 }
 #contact-container button{
+    font-weight: bold;
+    height: 2rem;
     display: flex;
     justify-content: center;
+    align-items: center;
+    align-self: flex-end;
     width: 5rem;
 
 }
