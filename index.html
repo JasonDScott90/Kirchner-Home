@@ -48,21 +48,55 @@
     </div>
     <h1 id="services">SERVICES</h1>
     <div id="service-section">
-        <div>
-            <h2>Interior Remodeling</h2>
-            <img src="./home_remodeling_myths.jpg" alt="">
+        <div class="service-item">
+            <h1>Interior Remodeling</h1>
+            <h2><p>Kitchens</p>
+                <p>Baths</p>
+                <p>Trim & Doors</p>
+                <p>Closets</p>
+                <p>Flooring</p>
+            </h2>
+            <div class="image-container">
+                <img src="./home_remodeling_myths.jpg" alt="">
+                <div class="overlay">
+                    
+                </div>
+            </div>
         </div>
-        <div>
-            <h2>Outdoor Living / Decks</h2>
-            <img src="./cdnassets.hw.jpg" alt="">
+        <div class="service-item">
+            <h1>Outdoor Living</h1>
+            <h2><p>Decks</p>
+                <p>Patios</p>
+                <p>Outdoor Kitchens</p>
+                <p>Fire Pits</p>
+                <p>Landscaping</p>
+            </h2>
+            <div class="image-container">
+                <img src="./cdnassets.hw.jpg" alt="">
+            </div>
         </div>
-        <div>
-            <h2>Painting</h2>
-            <img src="./Fillo-Painting_What-to-Expect-from-a-Professional-Painter_IMAGE1.jpeg" alt="">
+        <div class="service-item">
+            <h1>Painting</h1>
+            <h2><p>Interior</p>
+                <p>Exterior</p>
+                <p>Commercial</p>
+                <p>Residential</p>
+                <p>Detailing</p>
+            </h2>
+            <div class="image-container">
+                <img src="./Fillo-Painting_What-to-Expect-from-a-Professional-Painter_IMAGE1.jpeg" alt="">
+            </div>
         </div>
-        <div>
-            <h2>General Maintenance</h2>
-            <img src="./General-MaintenanceResized.jpg" alt="">
+        <div class="service-item">
+            <h1>General Maintenance</h1>
+            <h2><p>Repairs</p>
+                <p>Cleaning</p>
+                <p>Installation</p>
+                <p>Inspections</p>
+                <p>Consultations</p></h2>
+            <div class="image-container">
+                <img src="./General-MaintenanceResized.jpg" alt="">
+            </div>
         </div>
     </div>
     <div id="contact-container">
@@ -130,22 +164,13 @@
     <script src="path/to/bootstrap/js/bootstrap.min.js"></script>
     <script>
         function validateForm() {
-            var name = document.forms["contactForm"]["name"].value;
-            var email = document.forms["contactForm"]["email"].value;
-            var service = document.forms["contactForm"]["service"].value;
-            var message = document.forms["contactForm"]["message"].value;
-
-            if (name == "" || email == "" || service == "" || message == "") {
-                alert("All fields must be filled out");
+            var name = document.forms[0]["name"].value;
+            var email = document.forms[0]["email"].value;
+            var message = document.forms[0]["message"].value;
+            if (name == "" || email == "" || message == "") {
+                alert("Name, email, and message fields must be filled out.");
                 return false;
             }
-
-            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-            if (!emailPattern.test(email)) {
-                alert("Please enter a valid email address");
-                return false;
-            }
-
             return true;
         }
     </script>
