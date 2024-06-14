@@ -42,13 +42,12 @@ body {
     border-radius: 3px;
     margin-right: 1rem;
     display: flex;
-    gap: 2%;
     align-items: center;
 }
 .nav-bar-right ul {
-    margin-right: 5rem;
+    margin-right: 3rem;
     display: flex;
-    gap: 5%;
+    gap: 4%;
     list-style: none;
 }
 a {
@@ -78,9 +77,16 @@ a {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
+.nav-bar-right .socials a i{
+    color:#000220
+}
 /*--------------------------ABOUT-US-SECTION-------------------------------*/
 #section-image-text {
-    margin-top: 2rem;;
+    border-bottom: 2px solid white;
+    border-color: white;
+    
+    margin-top: 2rem;
+    margin-bottom: 1rem;
     text-transform: uppercase;
     color: white;
     font-size: 2rem;
@@ -104,11 +110,10 @@ img {
     max-height: 800px;
 }
 #about-us-1 {
-    font-size: 1rem;
+    font-size: 25px;
     text-align: center;
     color: white;
     display: flex;
-    
     justify-content: space-around;
     align-items: center;
     padding: 5%;
@@ -119,9 +124,9 @@ img {
     margin: 2%;
 }
 #about-us-2 {
+    border-color: #000220;
     border-style: solid;
-    
-    font-size: 1.3rem;
+    font-size: 25px;
     text-align: center;
     background-color: white;
     color: #000220;
@@ -156,6 +161,51 @@ img {
     height: 300px;
 }
 /******************/
+#service-section {
+    text-align: center;
+}
+
+.service-item {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in-text {
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.5); /* Optional: to make text more readable */
+    color: white;
+    transition: opacity 1s ease-in-out;
+}
+
+.image-container:hover img {
+    opacity: 1;
+}
+
+.image-container:hover .fade-in-text {
+    opacity: 2;
+}
 
 /*------------------CONTACT-FORM--------------------------------*/
 #contact-container{
