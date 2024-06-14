@@ -402,6 +402,7 @@ img {
     
     /* Header Section */
     #header {
+        display: none;
         padding: 10px;
         color: white;
         text-align: center;
@@ -450,11 +451,15 @@ img {
     /* About Us Section */
     #about-us-1{
         display: flex;
+        width: 100%;
         flex-direction: column-reverse;
     }
     #about-us-2{
         display:flex;
         flex-direction: column;
+    }
+    .about-us-text-1{
+        font-size: 15px;
     }
     #section-image-text {
         padding: 20px;
