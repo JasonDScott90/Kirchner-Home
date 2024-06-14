@@ -109,7 +109,7 @@ img {
     /* padding: 5%; */
     width: 80%;
     height: auto;
-    max-height: 800px;
+    max-height: 500px;
 }
 #about-us-1 {
     font-size: 25px;
@@ -210,8 +210,18 @@ img {
 }
 
 /*------------------CONTACT-FORM--------------------------------*/
+#contact-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    padding: 2rem;
+}
+
+
 #contact-container {
-    width: 100%;
+    width: 50%;
     height: auto; /* Changed to auto to fit content */
     background-color: white;
     color: #000220;
