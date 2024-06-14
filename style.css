@@ -239,11 +239,13 @@ img {
 /*------------------FOOTER--------------------------*/
 
 #footer {
-    background-color: #000220;
-    color: white;
+    background-color: white;
+    color: #000220;
     padding: 20px 0;
 }
 .footer-container {
+    background-color: white;
+    color: #000220;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -274,7 +276,7 @@ img {
     padding: 0;
 }
 .footer-section a {
-    color: white;
+    color: #000220;
     text-decoration: none;
 }
 .footer-section a:hover {

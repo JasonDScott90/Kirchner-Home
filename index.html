@@ -67,17 +67,18 @@
     </div>
     <div id="contact-container">
         <h1>Contact Form</h1>
-        <form>
-            <input type="text" name="Name" placeholder="Full Name" required>
-            <input type="email" name="Email" placeholder="Email" required>
-            <select name="Services" id="">
-                <option value="">Interior Remodeling</option>
-                <option value="">Outdoor Living</option>
-                <option value="">Decks</option>
-                <option value="">Painting</option>
-                <option value="">General Maintenance</option>
+        <form action="https://formsubmit.co/kirchnerhomeimprove-ments@gmail.com" method="POST" onsubmit="return validateForm()">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="number" name="phoneNumber" placeholder="Phone Number">
+            <select name="service" id="">
+                <option value="Interior Remodeling">Interior Remodeling</option>
+                <option value="Outdoor Living">Outdoor Living</option>
+                <option value="Decks">Decks</option>
+                <option value="Painting">Painting</option>
+                <option value="General Maintenance">General Maintenance</option>
             </select>
-            <textarea name="Message" id="" placeholder="Message" required></textarea>
+            <textarea name="message" id="" placeholder="Message" required></textarea>
             <button type="submit">Send</button>
         </form>
     </div>
@@ -127,5 +128,26 @@
         </div>
     </div>
     <script src="path/to/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        function validateForm() {
+            var name = document.forms["contactForm"]["name"].value;
+            var email = document.forms["contactForm"]["email"].value;
+            var service = document.forms["contactForm"]["service"].value;
+            var message = document.forms["contactForm"]["message"].value;
+
+            if (name == "" || email == "" || service == "" || message == "") {
+                alert("All fields must be filled out");
+                return false;
+            }
+
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
 </body>
 </html>
